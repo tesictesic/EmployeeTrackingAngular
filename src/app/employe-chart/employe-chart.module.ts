@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { EmployeChartRoutingModule } from './employe-chart-routing.module';
 import { ChartComponentComponent } from './chart-component/chart-component.component';
+import { ChartModule } from 'primeng/chart';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { ChartComponentComponent } from './chart-component/chart-component.compo
   ],
   imports: [
     CommonModule,
-    EmployeChartRoutingModule
+    EmployeChartRoutingModule,
+    ChartModule,
+    CanvasJSAngularChartsModule
   ]
 })
 export class EmployeChartModule { }

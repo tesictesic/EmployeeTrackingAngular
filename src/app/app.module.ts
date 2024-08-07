@@ -16,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     NgbModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+   
   ],
   providers: [
     provideClientHydration()
