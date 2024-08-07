@@ -26,7 +26,6 @@ export class TableComponentComponent implements OnInit {
       next:(data)=>{
         this.employees=data; console.log(this.employees)
         this.CalculateTotalTimeWorked(this.employees);
-        this.FilterSort();
 
       },
       error:(error)=>{console.log(error)}
