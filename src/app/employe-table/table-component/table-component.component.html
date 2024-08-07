@@ -1,0 +1,32 @@
+<div>
+  <label for="keyword">Search by keyword</label>
+  <input type="text" name="keyword" id="keyword" [value]="keyword" (keyup)="searchByKeyword(keyword_value.value)" #keyword_value/>
+  <br>
+  <br>
+  <label for="sort">Sort by</label>
+  <select name="sort" id="sort" [value]="sort" (change)="SortByTotalWorked(sort_value.value)" #sort_value>
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+  </select>
+</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Total time worked</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      @for(employee of employees; track employee ){
+       
+        <tr >
+          <th [ngClass]="{'redLine': employee.totalWorkedHour < 100}" scope="row">{{employee.Id}}</th>
+          <td [ngClass]="{'redLine': employee.totalWorkedHour < 100}" >{{employee.EmployeeName}}</td>
+          <td [ngClass]="{'redLine': employee.totalWorkedHour < 100}">{{employee.totalWorkedHour}}</td>
+         
+        </tr>
+      }
+    </tbody>
+  </table>
